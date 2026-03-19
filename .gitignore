@@ -1,0 +1,37 @@
+# Ignore everything by default
+*
+
+# Track portable configuration
+!.gitignore
+!settings.json
+!settings.local.json
+!commands/
+!commands/**
+
+# Track global CLAUDE.md if it exists
+# (lives at ~/.claude/CLAUDE.md)
+!CLAUDE.md
+
+# Track memory system
+!projects/
+!projects/**/memory/
+!projects/**/memory/**
+!projects/**/CLAUDE.md
+
+# Never track secrets/credentials
+.credentials.json
+
+# Never track machine-local state
+sessions/
+cache/
+debug/
+backups/
+downloads/
+file-history/
+paste-cache/
+plans/
+tasks/
+shell-snapshots/
+history.jsonl
+mcp-needs-auth-cache.json
+statsig/

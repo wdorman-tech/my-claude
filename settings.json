@@ -1,0 +1,5 @@
+{
+  "model": "opus",
+  "autoUpdatesChannel": "latest",
+  "skipDangerousModePermissionPrompt": true
+}
