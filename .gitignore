@@ -7,6 +7,10 @@
 !settings.local.json
 !commands/
 !commands/**
+!agents/
+!agents/**
+!scripts/
+!scripts/**
 
 # Track global CLAUDE.md if it exists
 # (lives at ~/.claude/CLAUDE.md)

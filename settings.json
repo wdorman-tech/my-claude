@@ -1,5 +1,18 @@
 {
   "model": "opus",
   "autoUpdatesChannel": "latest",
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/scripts/check-config-sync.sh\""
+          }
+        ]
+      }
+    ]
+  }
 }
