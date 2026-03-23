@@ -12,9 +12,10 @@
 !scripts/
 !scripts/**
 
-# Track global CLAUDE.md if it exists
+# Track global CLAUDE.md and README
 # (lives at ~/.claude/CLAUDE.md)
 !CLAUDE.md
+!README.md
 
 # Track memory system
 !projects/
