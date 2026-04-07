@@ -57,7 +57,10 @@
       }
     ]
   },
+  "effortLevel": "high",
   "autoUpdatesChannel": "latest",
   "skipDangerousModePermissionPrompt": true,
-  "effortLevel": "high"
+  "enabledPlugins": {
+    "vercel@claude-plugins-official": true
+  }
 }
