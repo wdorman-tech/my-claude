@@ -57,10 +57,15 @@
       }
     ]
   },
+  "enabledPlugins": {
+    "vercel@claude-plugins-official": true
+  },
   "effortLevel": "high",
   "autoUpdatesChannel": "latest",
   "skipDangerousModePermissionPrompt": true,
-  "enabledPlugins": {
-    "vercel@claude-plugins-official": true
+  "voiceEnabled": true,
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
   }
 }
