@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -f \"/c/Users/bob dorman/.claude/dash/events/sandbox-probe.json\")",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}
