@@ -1,71 +1,135 @@
 {
-  "model": "opus",
+  "autoUpdatesChannel": "latest",
+  "effortLevel": "max",
+  "enabledPlugins": {
+    "vercel@claude-plugins-official": true
+  },
   "hooks": {
-    "SessionStart": [
+    "Notification": [
       {
-        "matcher": "startup",
         "hooks": [
           {
-            "type": "command",
-            "command": "bash \"$HOME/.claude/scripts/check-config-sync.sh\""
+            "command": "bash \"$HOME/.claude/scripts/notify-windows.sh\"",
+            "type": "command"
           }
-        ]
-      }
-    ],
-    "PreToolUse": [
+        ],
+        "matcher": "permission_prompt"
+      },
       {
-        "matcher": "Write|Edit",
         "hooks": [
           {
-            "type": "command",
-            "command": "bash \"$HOME/.claude/scripts/block-sensitive-files.sh\"",
-            "timeout": 5
+            "command": "bash \"$HOME/.claude/scripts/notify-windows.sh\"",
+            "type": "command"
+          }
+        ],
+        "matcher": "idle_prompt"
+      },
+      {
+        "hooks": [
+          {
+            "command": "bash \"$HOME/.claude/scripts/dash-status.sh\"",
+            "timeout": 5,
+            "type": "command"
           }
         ]
       }
     ],
     "PostToolUse": [
       {
-        "matcher": "Write|Edit",
         "hooks": [
           {
-            "type": "command",
             "command": "bash \"$HOME/.claude/scripts/format-on-save.sh\"",
-            "timeout": 30
+            "timeout": 30,
+            "type": "command"
+          }
+        ],
+        "matcher": "Write|Edit"
+      },
+      {
+        "hooks": [
+          {
+            "command": "bash \"$HOME/.claude/scripts/dash-status.sh\"",
+            "timeout": 5,
+            "type": "command"
           }
         ]
       }
     ],
-    "Notification": [
+    "PreToolUse": [
       {
-        "matcher": "permission_prompt",
         "hooks": [
           {
-            "type": "command",
-            "command": "bash \"$HOME/.claude/scripts/notify-windows.sh\""
+            "command": "bash \"$HOME/.claude/scripts/block-sensitive-files.sh\"",
+            "timeout": 5,
+            "type": "command"
           }
-        ]
+        ],
+        "matcher": "Write|Edit"
       },
       {
-        "matcher": "idle_prompt",
         "hooks": [
           {
-            "type": "command",
-            "command": "bash \"$HOME/.claude/scripts/notify-windows.sh\""
+            "command": "bash \"$HOME/.claude/scripts/dash-status.sh\"",
+            "timeout": 5,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "command": "bash \"$HOME/.claude/scripts/dash-status.sh\"",
+            "timeout": 5,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "bash \"$HOME/.claude/scripts/dash-status.sh\"",
+            "timeout": 5,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "bash \"$HOME/.claude/scripts/dash-status.sh\"",
+            "timeout": 5,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "bash \"$HOME/.claude/scripts/dash-status.sh\"",
+            "timeout": 5,
+            "type": "command"
           }
         ]
       }
     ]
   },
-  "enabledPlugins": {
-    "vercel@claude-plugins-official": true
+  "model": "opus",
+  "permissions": {
+    "defaultMode": "bypassPermissions"
   },
-  "effortLevel": "high",
-  "autoUpdatesChannel": "latest",
+  "skipAutoPermissionPrompt": true,
   "skipDangerousModePermissionPrompt": true,
-  "voiceEnabled": true,
   "voice": {
     "enabled": true,
     "mode": "hold"
-  }
+  },
+  "voiceEnabled": true
 }
