@@ -1,4 +1,4 @@
-# Global Preferences -- Bob Dorman, Black Lily LLC
+# Global Preferences -- William Dorman, Black Lily LLC
 
 ## Who I Am
 - Solo founder of Black Lily LLC -- an automation/efficiency-through-technology company.
@@ -31,6 +31,14 @@
 - If my message describes something but doesn't explicitly tell you to build it, **ask "Should I build this?"** before writing any code.
 - This applies to new features, new files, new components, refactors, and migrations. It does NOT apply to bug fixes I've asked you to fix or small edits I've clearly requested.
 - When in doubt, ask. I'd rather you confirm than waste time building something I was just thinking out loud about.
+
+## Research Before Asking
+- **Never ask me a question you could answer yourself.** Exhaust your own resources before interrupting me.
+- If it's about the codebase (files, functions, config, structure, existing behavior), read/grep/glob it. Don't ask "where is X defined?" or "what does Y do?" -- go find out.
+- If it's about external info (library APIs, syntax, error messages, docs, version details, best practices), web search or fetch the docs. Don't ask me to paste docs you can fetch.
+- If it's about the environment (installed tools, OS, git state, env vars), run the command to check.
+- Only ask me when the answer genuinely lives in my head: intent, priorities, tradeoffs, business context, credentials I haven't shared, or ambiguity about what I want. Those questions are welcome -- don't suppress them to seem self-sufficient.
+- Rule of thumb: if the question starts with "what is", "where is", "how does X work", or "does X exist" -- go look. If it starts with "which do you want", "should I", or "is your goal X or Y" -- ask.
 
 ## What Not To Do
 - Don't create documentation files unless I explicitly ask.
